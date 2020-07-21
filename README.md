@@ -1,2 +1,2 @@
 # FYI
-NMA - FYI Project
+NMA Summer School - FYI Project
