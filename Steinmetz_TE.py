@@ -9,8 +9,7 @@ import os
 import numpy as np
 import jpype
 import pickle
-#from idtxl.multivariate_te import MultivariateTE
-#from idtxl.data import Data
+
 
 def get_brain_groupings():
     regions = ["vis ctx", "thal", "hipp", "other ctx", "midbrain", "basal ganglia", "cortical subplate", "other"]
@@ -44,31 +43,6 @@ def load_data(folder_name="Preprocessed_Data"):
     
     return alldat
 
-'''
-def Net_Gen(data,tau_max):
-    neurons, trials, T = np.shape(data)
-    settings = {'cmi_estimator': 'JidtDiscreteCMI',#Discrete for spike trains use JidtGaussianCMI for continuous
-                'max_lag_sources': tau_max,
-                'min_lag_sources': 1,
-                'n_discrete_bins': np.max(data)+1,
-                'permute_in_time': True}#Should be 2 for binary spike trains
-     
-    mte = MultivariateTE()
-    d = Data(data,'prs',normalise=False)#For neurons * trials * timesteps format Normalize = False for spike trains
-    results = mte.analyse_network(settings=settings, data = d)
-    net = np.zeros((neurons,neurons))
-    for i in range(neurons):
-        r_dict = results.get_single_target(i,False)
-        svs = r_dict['selected_vars_sources']#Find sources for the target
-        tes = r_dict['te']#Find TE values for the corresponding sources
-        srcs = []
-        for s in svs:
-            if s[0] not in srcs:
-                srcs.append(s[0])#To get rid of multiple lags from same source
-        for k,j in enumerate(srcs):
-            net[j,i] = tes[k]
-    return net
-'''
 def discretize(a):
     da = np.zeros_like(a)
     for j in range(len(a)):
@@ -96,7 +70,7 @@ def get_te(n1,n2,resp_times,k,tau_max):
             trg = dn2[j,tau:resp_times[j]]
             tec.addObservations(src.tolist(),trg.tolist())
         te_temp = tec.computeAverageLocalOfObservations()
-        surr_dist = tec.computeSignificance(200)
+        surr_dist = tec.computeSignificance(100)
         te_net = te_temp - surr_dist.getMeanOfDistribution()
         pval = surr_dist.pValue
         if(te_net<0):
