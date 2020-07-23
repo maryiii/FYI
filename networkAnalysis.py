@@ -64,7 +64,7 @@ def walktrap(adj, steps=5):
 # ------------------------------------------------------------------#
 
 
-def calculate_NMI(self, comm1, comm2, method="nmi"):
+def calculate_NMI(comm1, comm2, method="nmi"):
     """
     Compares two community structures
 
