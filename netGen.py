@@ -49,7 +49,7 @@ def edge_optimization(whole_data, net_type):
     p_val_edges = net[:, :, 2]
     for i in range(p_val_edges.shape[0]):
         for j in range(p_val_edges.shape[1]):
-            if p_val_edges[i, j] < 0.05:
+            if p_val_edges[i, j] > 0.05:
                 net[i, j] = 0
                     
     return net_adj
