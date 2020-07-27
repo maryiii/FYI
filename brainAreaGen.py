@@ -109,3 +109,5 @@ def write_dict(name, dict_of_final_edges):
 
 final_correct_edges = run_sections("cnet.dot")
 write_dict('outputs/correct_net.pkl', final_correct_edges)
+final_incorrect_edges = run_sections("_net.dot")
+write_dict('outputs/incorrect_net.pkl', final_correct_edges)
