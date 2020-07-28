@@ -8,7 +8,11 @@ import pickle
 #from networkx.algorithms.community import asyn_lpa_communities
 import pydot
 from networkx.drawing.nx_pydot import write_dot
+import re
+import os 
 
+def get_numbers_from_filename(filename):
+    return re.search(r'\d+', filename).group(0)
 
 #read the input data from .pkl file into a dictionary
 def pickle_reader(file):
@@ -119,16 +123,22 @@ for d in asyn_lpa_communities(net1, 'weight'):
 '''
 
 #print(pickle_reader('NetResults_3.pkl'))
-
-network_data = pickle_reader('NetResults_3.pkl')
-graph_correct = graph_generator(network_data, 'Correct Network', 'Correct Brain Areas')
-#print(nx.get_edge_attributes(graph_correct, 'delay
-graph_incorrect = graph_generator(network_data, 'Incorrect Network', 'Incorrect Brain Areas')
-graph_passive = graph_generator(network_data, 'Passive Network', 'Passive Brain Areas')
-write_network_to_file(graph_correct, "correct_net")
-write_network_to_file(graph_incorrect, "incorrect_net")
-write_network_to_file(graph_passive, "passive_net")
-
+for filename in os.listdir('C:/Users/ansar/Desktop/information_flow/FYI/Networks'):
+    file_number = get_numbers_from_filename(filename)
+    network_data = pickle_reader('Networks/NetResults_' + file_number + '.pkl')
+    '''
+    graph_correct = graph_generator(network_data, 'Correct Network', 'Correct Brain Areas')
+    #print(nx.get_edge_attributes(graph_correct, 'delay
+    graph_incorrect = graph_generator(network_data, 'Incorrect Network', 'Incorrect Brain Areas')
+    graph_passive = graph_generator(network_data, 'Passive Network', 'Passive Brain Areas')
+    '''
+    graph_uncertain = graph_generator(network_data, 'Uncertain Network', 'Uncertain Brain Areas')
+    '''
+    write_network_to_file(graph_correct, "data/correct" + file_number + "_cnet")
+    write_network_to_file(graph_incorrect, "data/incorrect" + file_number + "_inet")
+    write_network_to_file(graph_passive, "data/passive" + file_number + "_pnet")
+    '''
+    write_network_to_file(graph_uncertain, "data/uncertain" + file_number + "_unet")
 
 #.plot(*zip(*sorted(bc.items())))
 #plt.show()
