@@ -1,0 +1,4 @@
+import pickle
+
+with open('name of the selected output', 'rb') as handle:
+    variable_name = pickle.load(handle)
