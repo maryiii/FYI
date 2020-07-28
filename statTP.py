@@ -30,7 +30,7 @@ def ttest_calc(edge_data, edge_data1):
 def anova_test(edge_data, edge_data1, edge_data2):
     final_stats = dict()
     for key in edge_data.keys():
-        if key in edge_data1.keys() && key in edge_data2.keys():
+        if key in edge_data1.keys() and key in edge_data2.keys():
             list_1 = edge_data[key]
             list_2 = edge_data1[key]
             list_3 = edge_data2[key]

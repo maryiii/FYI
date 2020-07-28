@@ -1,0 +1,33 @@
+strict digraph  {
+LS;
+CA3;
+root;
+PL;
+CA1;
+MOs;
+ORB;
+SCs;
+SCm;
+PAG;
+LD;
+LP;
+VPL;
+DG;
+VISp;
+ACA;
+SSp;
+PO;
+LS -> DG  [weight="0.043514314853995956"];
+CA3 -> root  [weight="0.02846088694388948"];
+root -> PAG  [weight="0.04102830944817116"];
+PL -> VISp  [weight="0.027265111904867537"];
+CA1 -> ACA  [weight="0.025474453740595215"];
+MOs -> SCm  [weight="0.0007564857149753642"];
+ORB -> PAG  [weight="0.036227084064042306"];
+SCs -> PAG  [weight="0.044010443077723164"];
+SCm -> MOs  [weight="0.009233558473856256"];
+PAG -> MOs  [weight="0.041106688186457435"];
+LD -> SSp  [weight="0.031115279251450474"];
+LP -> PO  [weight="0.03894034618610566"];
+VPL -> CA3  [weight="0.026096734301531956"];
+}

@@ -1,0 +1,23 @@
+strict digraph  {
+LS;
+DG;
+root;
+VISp;
+SCs;
+PAG;
+LGd;
+VPL;
+CA1;
+RSP;
+ORB;
+MB;
+CA3;
+LS -> DG  [weight="0.04502124624516741"];
+DG -> LS  [weight="0.027766246618550178"];
+root -> PAG  [weight="0.020512435560919542"];
+VISp -> CA1  [weight="0.0401512631350861"];
+SCs -> RSP  [weight="0.04678575815797869"];
+PAG -> ORB  [weight="0.024441988236595477"];
+LGd -> MB  [weight="0.049732248232439796"];
+VPL -> CA3  [weight="0.008589924455594517"];
+}
