@@ -1,0 +1,73 @@
+Id,Label,timeset,region,clustering,Eccentricity,closnesscentrality,harmonicclosnesscentrality,betweenesscentrality,indegree,outdegree,Degree,Authority,Hub
+LS,LS,,basal ganglia,0,1,1,1,1,2,1,3,0,0
+MOs,MOs,,non-visual cortex,0,4,0.4,0.520833,4,1,1,2,0,0
+ACA,ACA,,non-visual cortex,0,4,0.4,0.520833,0,0,1,1,0,0
+VISp,VISp,,visual cortex,0,2,0.666667,0.75,8,2,1,3,0,0.377964
+CA3,CA3,,hippocampal,0,3,0.5,0.611111,18,4,1,5,0,0
+SUB,SUB,,hippocampal,0,2,0.666667,0.75,0,0,1,1,0,0
+DG,DG,,hippocampal,0,2,0.666667,0.75,6,3,1,4,0,0.377964
+MOp,MOp,,non-visual cortex,0,2,0.666667,0.75,0,0,1,1,0,0
+PT,PT,,thalamus,0,4,0.4,0.520833,0,0,1,1,0,0
+LSc,LSc,,basal ganglia,0,4,0.4,0.520833,0,0,1,1,0,0
+CP,CP,,basal ganglia,0,2,0.666667,0.75,0,0,1,1,0,0
+LSr,LSr,,basal ganglia,0,3,0.5,0.611111,30,6,1,7,0,0
+LGd,LGd,,thalamus,0,4,0.4,0.520833,0,0,1,1,0,0
+PL,PL,,non-visual cortex,0,1,1,1,0,1,1,2,0,0
+MD,MD,,thalamus,0,2,0.666667,0.75,0,0,1,1,0,0
+CA1,CA1,,hippocampal,0,2,0.666667,0.75,8,2,1,3,0,0.377964
+VISam,VISam,,visual cortex,0,2,0.666667,0.75,40,4,1,5,0,0
+LH,LH,,thalamus,0,1,1,1,2,2,1,3,0,0
+ZI,ZI,,midbrain,0,5,0.333333,0.456667,0,0,1,1,0,0
+MB,MB,,midbrain,0,2,0.666667,0.75,0,0,1,1,0,0.377964
+SCm,SCm,,midbrain,0,2,0.666667,0.75,0,0,1,1,0,0.377964
+MRN,MRN,,midbrain,0,2,0.666667,0.75,2,1,1,2,0,0.377964
+RN,RN,,midbrain,0,4,0.4,0.520833,0,0,1,1,0,0
+SCs,SCs,,midbrain,0,4,0.4,0.520833,0,0,1,1,0,0
+MS,MS,,basal ganglia,0,3,0.5,0.611111,3,1,1,2,0,0
+ORB,ORB,,non-visual cortex,0,3,0.5,0.611111,0,0,1,1,0,0
+PAG,PAG,,midbrain,0,3,0.5,0.611111,0,0,1,1,0,0
+RSP,RSP,,non-visual cortex,0,2,0.666667,0.75,2,1,1,2,0,0
+GPe,GPe,,basal ganglia,0,1,1,1,5,4,1,5,0,0.377964
+BLA,BLA,,cortical subplate,0,1,1,1,0,1,1,2,0,0
+VPM,VPM,,thalamus,0,5,0.333333,0.456667,0,0,1,1,0,0
+SSs,SSs,,non-visual cortex,0,4,0.4,0.520833,0,0,1,1,0,0
+TH,TH,,thalamus,0,1,1,1,4,4,1,5,0,0
+RT,RT,,thalamus,0,5,0.333333,0.456667,0,0,1,1,0,0
+VPL,VPL,,thalamus,0,1,1,1,22,3,1,4,0,0
+LD,LD,,thalamus,0,1,1,1,1,2,1,3,0,0
+MEA,MEA,,cortical subplate,0,2,0.666667,0.75,0,0,1,1,0,0
+ACB,ACB,,basal ganglia,0,3,0.5,0.611111,0,0,1,1,0,0
+SI,SI,,basal ganglia,0,1,1,1,0,0,1,1,0,0
+OT,OT,,basal ganglia,0,0,0,0,0,1,0,1,0,0
+SNr,SNr,,basal ganglia,0,1,1,1,0,1,1,2,0,0
+POL,POL,,thalamus,0,2,0.666667,0.75,0,0,1,1,0,0
+APN,APN,,midbrain,0,3,0.5,0.611111,0,0,1,1,0,0
+LP,LP,,thalamus,0,4,0.4,0.520833,12,2,1,3,0,0
+VISpm,VISpm,,visual cortex,0,3,0.5,0.611111,0,0,1,1,0,0
+VISa,VISa,,visual cortex,0,4,0.4,0.520833,0,0,1,1,0,0
+MG,MG,,thalamus,0,4,0.4,0.520833,0,0,1,1,0,0
+SPF,SPF,,thalamus,0,4,0.4,0.520833,0,0,1,1,0,0
+VISl,VISl,,visual cortex,0,3,0.5,0.611111,0,0,1,1,0,0
+POST,POST,,hippocampal,0,2,0.666667,0.75,0,0,1,1,0,0
+VAL,VAL,,thalamus,0,2,0.666667,0.75,0,0,1,1,0,0
+SSp,SSp,,non-visual cortex,0,1,1,1,2,3,1,4,0,0
+TT,TT,,,0,2,0.666667,0.75,2,1,1,2,0,0
+IC,IC,,midbrain,0,3,0.5,0.611111,0,0,1,1,0,0
+SCsg,SCsg,,midbrain,0,2,0.666667,0.75,4,2,1,3,0,0
+PO,PO,,thalamus,0,3,0.5,0.611111,0,0,1,1,0,0
+CA2,CA2,,hippocampal,0,3,0.5,0.611111,0,0,1,1,0,0
+SCig,SCig,,midbrain,0,3,0.5,0.611111,0,0,1,1,0,0
+ILA,ILA,,non-visual cortex,0,4,0.4,0.520833,0,0,1,1,0,0
+DP,DP,,non-visual cortex,0,3,0.5,0.611111,0,0,1,1,0,0
+CL,CL,,thalamus,0,2,0.666667,0.75,0,0,1,1,0,0
+NB,NB,,midbrain,0,3,0.5,0.611111,6,2,1,3,0,0
+OLF,OLF,,non-visual cortex,0,3,0.5,0.611111,3,1,1,2,0,0
+EP,EP,,cortical subplate,0,4,0.4,0.520833,8,2,1,3,0,0
+BMA,BMA,,cortical subplate,0,6,0.285714,0.408333,0,0,1,1,0,0
+COA,COA,,non-visual cortex,0,5,0.333333,0.456667,5,1,1,2,0,0
+CA,CA,,hippocampal,0,5,0.333333,0.456667,0,0,1,1,0,0
+AUD,AUD,,non-visual cortex,0,2,0.666667,0.75,0,0,1,1,0,0
+PIR,PIR,,non-visual cortex,0,2,0.666667,0.75,0,0,1,1,0,0
+EPd,EPd,,cortical subplate,0,1,1,1,2,3,1,4,0,0
+ORBm,ORBm,,non-visual cortex,0,0,0,0,0,0,0,0,0,0
+VISrl,VISrl,,visual cortex,0,1,1,1,18,7,1,8,1,0
