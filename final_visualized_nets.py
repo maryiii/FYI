@@ -57,6 +57,8 @@ edge_data_pu = pickle_reader('statistical_results/passiveUncertain.pkl')
 edges_pu = edge_gen(edge_data_pu)
 edge_data_ap = pickle_reader('statistical_results/activePassive.pkl')
 edges_ap = edge_gen(edge_data_ap)
+edge_data_ceu = pickle_reader('statistical_results/certainUncertain.pkl')
+edges_ceu = edge_gen(edge_data_ceu)
 
 final_regions = dict()
 
@@ -70,6 +72,7 @@ for node in net_ci.nodes():
 #print(final_regions)                
 nx.set_node_attributes(net_ci, final_regions, 'region')
 #print(net_ci.nodes())
+
 net_cp = nx.from_dict_of_dicts(edges_cp, create_using = nx.DiGraph())
 final_regions = dict()
 for node in net_cp.nodes():
@@ -81,6 +84,7 @@ for node in net_cp.nodes():
 #print(final_regions)                
 nx.set_node_attributes(net_cp, final_regions, 'region')
 #print(net_ci.nodes())
+
 net_cu = nx.from_dict_of_dicts(edges_cu, create_using = nx.DiGraph())
 final_regions = dict()
 for node in net_cu.nodes():
@@ -92,6 +96,7 @@ for node in net_cu.nodes():
 #print(final_regions)                
 nx.set_node_attributes(net_cu, final_regions, 'region')
 #print(net_ci.nodes())
+
 net_ip = nx.from_dict_of_dicts(edges_ip, create_using = nx.DiGraph())
 final_regions = dict()
 for node in net_ip.nodes():
@@ -103,6 +108,7 @@ for node in net_ip.nodes():
 #print(final_regions)                
 nx.set_node_attributes(net_ip, final_regions, 'region')
 #print(net_ci.nodes())
+
 net_iu = nx.from_dict_of_dicts(edges_iu, create_using = nx.DiGraph())
 final_regions = dict()
 for node in net_iu.nodes():
@@ -114,6 +120,7 @@ for node in net_iu.nodes():
 #print(final_regions)                
 nx.set_node_attributes(net_iu, final_regions, 'region')
 #print(net_ci.nodes())
+
 net_pu = nx.from_dict_of_dicts(edges_pu, create_using = nx.DiGraph())
 final_regions = dict()
 for node in net_pu.nodes():
@@ -125,6 +132,7 @@ for node in net_pu.nodes():
 #print(final_regions)                
 nx.set_node_attributes(net_pu, final_regions, 'region')
 #print(net_ci.nodes())
+
 net_ap = nx.from_dict_of_dicts(edges_ap, create_using = nx.DiGraph())
 final_regions = dict()
 for node in net_ap.nodes():
@@ -136,6 +144,17 @@ for node in net_ap.nodes():
 #print(final_regions)                
 nx.set_node_attributes(net_ap, final_regions, 'region')
 #print(net_ci.nodes())
+final_regions = dict()
+
+net_ceu = nx.from_dict_of_dicts(edges_ceu, create_using = nx.DiGraph())
+for node in net_cu.nodes():
+    area = str(node)
+    for key in brain_groups.keys():
+        for area_str in brain_groups[key]:
+            if area == area_str:
+                final_regions[node] = key
+#print(final_regions)                
+nx.set_node_attributes(net_ceu, final_regions, 'region')
 
 write_network_to_file(net_ci, 'ci')
 write_network_to_file(net_cp, 'cp')
@@ -144,6 +163,7 @@ write_network_to_file(net_ip, 'ip')
 write_network_to_file(net_iu, 'iu')
 write_network_to_file(net_pu, 'pu')
 write_network_to_file(net_ap, 'ap')
+write_network_to_file(net_ceu, 'ceu')
 
 
 

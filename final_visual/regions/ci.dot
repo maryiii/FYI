@@ -1,0 +1,18 @@
+strict digraph  {
+"basal ganglia";
+"non-visual cortex";
+"visual cortex";
+hippocampal;
+thalamus;
+midbrain;
+"cortical subplate";
+other;
+"basal ganglia" -> other  [weight="4.993804701699919"];
+"non-visual cortex" -> midbrain  [weight="3.434926395140131"];
+"visual cortex" -> other  [weight="4.603142482629183"];
+hippocampal -> midbrain  [weight="3.2241291671744983"];
+thalamus -> "visual cortex"  [weight="3.668920730617272"];
+midbrain -> "non-visual cortex"  [weight="3.796743790579983"];
+"cortical subplate" -> "basal ganglia"  [weight="2.569037168242651"];
+other -> "visual cortex"  [weight="3.7033167840870544"];
+}

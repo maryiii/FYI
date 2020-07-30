@@ -1,0 +1,38 @@
+digraph  {
+ACA;
+root;
+VISp;
+DG [region=hippocampal];
+LGd;
+PL [region="non-visual cortex"];
+CA1 [region=hippocampal];
+VISam [region="visual cortex"];
+MRN;
+MOs [region="non-visual cortex"];
+ACB;
+MG;
+TT;
+ILA;
+SCig;
+LD [region=thalamus];
+CA3 [region=hippocampal];
+SPF;
+LSr [region="basal ganglia"];
+ACA -> ILA  [weight="2.684759048274556"];
+root -> ACA  [weight="2.2280804042538915"];
+VISp -> MRN  [weight="2.2449737370938254"];
+DG -> VISam  [weight="3.228959837117858"];
+LGd -> ACA  [weight="2.1743425739979396"];
+PL -> ACA  [weight="3.0732984143169024"];
+CA1 -> TT  [weight="-3.663843279310596"];
+VISam -> MRN  [weight="2.2350049054064796"];
+MRN -> TT  [weight="2.626631163863802"];
+MOs -> SCig  [weight="2.5189348724091505"];
+ACB -> ACB  [weight="2.4831466404771363"];
+MG -> SPF  [weight="2.588615318423389"];
+TT -> LD  [weight="-2.896661723453589"];
+ILA -> ACA  [weight="2.5769625990415945"];
+SCig -> MOs  [weight="2.630793120925213"];
+LD -> TT  [weight="-2.968498179283693"];
+CA3 -> LSr  [weight="-2.3403328209429937"];
+}

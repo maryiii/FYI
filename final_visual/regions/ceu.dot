@@ -1,0 +1,10 @@
+strict digraph  {
+hippocampal;
+thalamus;
+other;
+"visual cortex";
+midbrain;
+hippocampal -> thalamus  [weight="2.243053568336016"];
+thalamus -> "visual cortex"  [weight="2.617097065593243"];
+other -> midbrain  [weight="2.8824870715437165"];
+}

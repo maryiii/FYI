@@ -24,7 +24,7 @@ def ttest_calc(edge_data, edge_data1):
             list_2 = edge_data1[key]
             if list_1 == list_2:
                 continue
-            t, p = stats.ttest_ind(list_1, list_2, equal_var = False)
+            t, p = stats.ttest_ind(list_2, list_1, equal_var = False)
             final_stats[key] = [t, p]
             
     return final_stats
@@ -103,10 +103,10 @@ def write_dict(name, dict_of_final_edges):
 
 
 
-edge_data_correct = pickle_reader('outputs/correct_net.pkl')
-edge_data_incorrect = pickle_reader('outputs/incorrect_net.pkl')
-edge_data_passive = pickle_reader('outputs/passive_net.pkl')
-edge_data_uncertain = pickle_reader('outputs/uncertain_net.pkl')
+edge_data_correct = pickle_reader('outputs/regions/correct_net.pkl')
+edge_data_incorrect = pickle_reader('outputs/regions/incorrect_net.pkl')
+edge_data_passive = pickle_reader('outputs/regions/passive_net.pkl')
+edge_data_uncertain = pickle_reader('outputs/regions/uncertain_net.pkl')
 ttest_vals_ci = ttest_calc(edge_data_correct, edge_data_incorrect)
 #final_p = FDR_correction(ttest_vals_ci)
 #print(final_p)
@@ -128,11 +128,11 @@ final_sig_vals_ap = find_significant_vals(ttest_vals_ap)
 ttest_vals_ceu = ttest_calc(combined_certain, edge_data_uncertain)
 final_sig_vals_ceu = find_significant_vals(ttest_vals_ceu)
 #print(final_sig_vals_uc)
-write_dict('statistical_results/correctIncorrect.pkl', final_sig_vals_ci)
-write_dict('statistical_results/correctPassive.pkl', final_sig_vals_cp)
-write_dict('statistical_results/incorrectPassive.pkl', final_sig_vals_ip)
-write_dict('statistical_results/correctUncertain.pkl', final_sig_vals_uc)
-write_dict('statistical_results/incorrectuncertain.pkl', final_sig_vals_ui)
-write_dict('statistical_results/passiveUncertain.pkl', final_sig_vals_up)
-write_dict('statistical_results/activePassive.pkl', final_sig_vals_ap)
-write_dict('statistical_results/certainUncertain.pkl', final_sig_vals_ceu)
+write_dict('statistical_results/regions/correctIncorrect.pkl', final_sig_vals_ci)
+#write_dict('statistical_results/regions/correctPassive.pkl', final_sig_vals_cp)
+#write_dict('statistical_results/regions/incorrectPassive.pkl', final_sig_vals_ip)
+#write_dict('statistical_results/regions/correctUncertain.pkl', final_sig_vals_uc)
+#write_dict('statistical_results/regions/incorrectuncertain.pkl', final_sig_vals_ui)
+#write_dict('statistical_results/regions/passiveUncertain.pkl', final_sig_vals_up)
+#write_dict('statistical_results/regions/activePassive.pkl', final_sig_vals_ap)
+#write_dict('statistical_results/regions/certainUncertain.pkl', final_sig_vals_ceu)

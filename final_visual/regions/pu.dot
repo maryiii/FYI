@@ -1,0 +1,12 @@
+strict digraph  {
+hippocampal;
+"basal ganglia";
+thalamus;
+midbrain;
+"non-visual cortex";
+hippocampal -> thalamus  [weight="2.117693952767031"];
+"basal ganglia" -> thalamus  [weight="2.451343523784547"];
+thalamus -> hippocampal  [weight="2.764114015597005"];
+midbrain -> "non-visual cortex"  [weight="2.219453539545976"];
+"non-visual cortex" -> midbrain  [weight="2.3660207893396588"];
+}

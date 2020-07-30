@@ -31,7 +31,7 @@ def edge_gen(whole_data):
     return final_edges
 
 def write_network_to_file(network, net_type):
-    string_file_name = str('final_visual/different_kinds/' + net_type + ".dot")
+    string_file_name = str('final_visual/different_kinds/regions/' + net_type + ".dot")
     write_dot(network, string_file_name)
 
 
@@ -46,17 +46,18 @@ brain_groups = { 'visual cortex' : ["VISa", "VISam", "VISl", "VISp", "VISpm", "V
                 }
 
 
-edge_data_correct = pickle_reader('outputs/correct_net.pkl')
+edge_data_correct = pickle_reader('outputs/regions/correct_net.pkl')
 edges_correct = edge_gen(edge_data_correct)
-edge_data_incorrect = pickle_reader('outputs/incorrect_net.pkl')
+edge_data_incorrect = pickle_reader('outputs/regions/incorrect_net.pkl')
 edges_incorrect = edge_gen(edge_data_incorrect)
-edge_data_passive = pickle_reader('outputs/passive_net.pkl')
+edge_data_passive = pickle_reader('outputs/regions/passive_net.pkl')
 edges_passive = edge_gen(edge_data_passive)
 edge_data_uncertain = pickle_reader('outputs/uncertain_net.pkl')
 edges_uncertain = edge_gen(edge_data_uncertain)
 
 
 net_correct = nx.from_dict_of_dicts(edges_correct, create_using = nx.DiGraph())
+'''
 final_regions = dict()
 for node in net_correct.nodes():
     area = str(node)
@@ -65,7 +66,9 @@ for node in net_correct.nodes():
             if area == area_str:
                 final_regions[node] = key
 nx.set_node_attributes(net_correct, final_regions, 'region')
+'''
 net_incorrect = nx.from_dict_of_dicts(edges_incorrect, create_using = nx.DiGraph())
+'''
 final_regions = dict()
 for node in net_incorrect.nodes():
     area = str(node)
@@ -74,7 +77,9 @@ for node in net_incorrect.nodes():
             if area == area_str:
                 final_regions[node] = key
 nx.set_node_attributes(net_incorrect, final_regions, 'region')
+'''
 net_passive = nx.from_dict_of_dicts(edges_passive, create_using = nx.DiGraph())
+'''
 final_regions = dict()
 for node in net_passive.nodes():
     area = str(node)
@@ -83,7 +88,9 @@ for node in net_passive.nodes():
             if area == area_str:
                 final_regions[node] = key
 nx.set_node_attributes(net_passive, final_regions, 'region')
+'''
 net_uncertain = nx.from_dict_of_dicts(edges_uncertain, create_using = nx.DiGraph())
+
 final_regions = dict()
 for node in net_uncertain.nodes():
     area = str(node)
@@ -94,9 +101,9 @@ for node in net_uncertain.nodes():
 nx.set_node_attributes(net_uncertain, final_regions, 'region')
 
 
-write_network_to_file(net_correct, 'correct')
-write_network_to_file(net_incorrect, 'incorrect')
-write_network_to_file(net_passive, 'passive')
+#write_network_to_file(net_correct, 'correct')
+#write_network_to_file(net_incorrect, 'incorrect')
+#write_network_to_file(net_passive, 'passive')
 write_network_to_file(net_uncertain, 'uncertain')
 
 
